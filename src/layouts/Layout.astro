@@ -20,6 +20,7 @@ const { title, description } = Astro.props;
     <SEO
       title={title}
       description={description}
+      canonical={Astro.url.href},
       openGraph={{
         basic: {
           title: title,
