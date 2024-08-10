@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
-posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+posts.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 
 const title = "UpNotify Blog";
 const description = "Stay updated with the latest news and tips from UpNotify.";
