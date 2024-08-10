@@ -142,12 +142,13 @@ const description = "UpNotify restores Upwork's RSS functionality with enhanced 
           <button class="bg-accent hover:bg-opacity-90 text-dark font-black py-3 px-8 rounded-md text-lg transition-colors transform hover:translate-x-1 hover:-translate-y-1 border-2 border-dark">
             <a href="https://buy.stripe.com/8wMdRX6JvggV7Kg288">Pre-order Now</a>
           </button>
-          <div class="relative">
-            <input type="email" placeholder="Enter your email" class="py-3 px-6 rounded-md text-lg border-2 border-dark bg-primary text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" />
-            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark text-primary px-4 py-1 rounded-md text-sm hover:bg-opacity-80 transition-colors">
+          <form class="relative" name="contact" method="POST" netlify>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="email" name="email" placeholder="Enter your email" class="py-3 px-6 rounded-md text-lg border-2 border-dark bg-primary text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" required />
+            <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark text-primary px-4 py-1 rounded-md text-sm hover:bg-opacity-80 transition-colors">
               Notify Me
             </button>
-          </div>
+          </form>
         </div>
       </section>
     </main>
