@@ -1,4 +1,7 @@
 
+
+
+
 ---
 import Layout from '../layouts/Layout.astro';
 
@@ -7,141 +10,147 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
 ---
 
 <Layout title={title} description={description}>
-  <div class="min-h-screen flex flex-col bg-[#f1f6fc] text-[#313B37]">
-    <header class="bg-[#011109] py-4 px-6 flex justify-between items-center">
+  <div class="min-h-screen flex flex-col bg-primary text-secondary font-sans">
+    <header class="bg-dark py-4 px-6 flex justify-between items-center border-b-4 border-accent">
       <div class="flex items-center space-x-2">
-        <span class="font-bold text-2xl text-[#B6FA46]">UpNotify</span>
+        <span class="font-bold text-3xl text-accent transform -rotate-2">UpNotify</span>
       </div>
       <nav class="space-x-6">
-        <a href="#features" class="text-white hover:text-[#B6FA46] transition-colors">Features</a>
-        <a href="#how-it-works" class="text-white hover:text-[#B6FA46] transition-colors">How It Works</a>
-        <a href="#faq" class="text-white hover:text-[#B6FA46] transition-colors">FAQ</a>
+        <a href="#features" class="text-primary hover:text-accent transition-colors font-bold">Features</a>
+        <a href="#how-it-works" class="text-primary hover:text-accent transition-colors font-bold">How It Works</a>
+        <a href="#faq" class="text-primary hover:text-accent transition-colors font-bold">FAQ</a>
       </nav>
-      <button class="bg-[#B6FA46] text-[#011109] px-6 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-colors">
+      <button class="bg-accent text-dark px-6 py-2 rounded-md text-sm font-bold hover:bg-opacity-90 transition-all shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:shadow-[2px_2px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[2px] hover:translate-y-[2px] border-2 border-dark">
         Pre-order now
       </button>
     </header>
 
-    <main class="flex-grow container mx-auto px-4 py-12">
+    <main class="flex-grow container mx-auto px-4 py-12 relative">
+      <div class="absolute top-0 left-0 w-20 h-20 bg-accent rounded-full opacity-50 -z-10 transform translate-x-8 translate-y-8"></div>
+      <div class="absolute bottom-0 right-0 w-32 h-32 bg-accent opacity-50 -z-10 transform -translate-x-12 -translate-y-12 rotate-12"></div>
+      
       <section class="flex flex-col lg:flex-row items-center justify-between mb-20 space-y-8 lg:space-y-0 lg:space-x-12">
         <div class="lg:w-1/2 space-y-8">
           <div>
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-[#011109]">
+            <h1 class="text-5xl lg:text-6xl font-black mb-6 text-dark leading-tight transform -rotate-1">
               Supercharge Your Upwork Job Search
             </h1>
-            <p class="text-xl mb-8">
+            <p class="text-xl mb-8 font-medium">
               UpNotify goes beyond simple RSS feeds. Our AI-powered platform ensures you never miss the perfect gig, 
               with advanced filtering and intelligent job matching tailored for freelancers and agencies.
             </p>
           </div>
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-[#011109]">Exclusive Pre-Order Offer</h3>
-            <p class="font-medium">Lock in our lowest price forever!</p>
-            <ul class="list-disc list-inside space-y-2">
-              <li>Pre-order price: <span class="text-[#011109] font-bold">$6/month</span> (lifetime)</li>
-              <li>Regular price: $9/month</li>
-              <li>1 advanced search profile with AI-powered filtering</li>
+          <div class="space-y-6 bg-primary p-8 border-4 border-dark rounded-lg transform rotate-1 hover:rotate-0 transition-transform">
+            <h3 class="text-3xl font-black text-dark">Exclusive Pre-Order Offer</h3>
+            <p class="font-bold">Lock in our lowest price forever!</p>
+            <ul class="list-none space-y-2">
+              <li class="flex items-center">
+                <span class="text-accent mr-2">&#9654;</span>
+                Pre-order price: <span class="text-dark font-black ml-2">$6/month</span> (lifetime)
+              </li>
+              <li class="flex items-center">
+                <span class="text-accent mr-2">&#9654;</span>
+                Regular price: $9/month
+              </li>
+              <li class="flex items-center">
+                <span class="text-accent mr-2">&#9654;</span>
+                1 advanced search profile with AI-powered filtering
+              </li>
             </ul>
             <div>
-              <div class="flex justify-between items-center mb-2">
-                <span class="font-semibold">Pre-order Progress</span>
-                <span class="font-semibold">50 spots left</span>
+              <div class="flex justify-between items-center mb-2 font-bold">
+                <span>Pre-order Progress</span>
+                <span>50 spots left</span>
               </div>
-              <div class="w-full bg-white rounded-full h-2.5">
-                <div class="bg-[#B6FA46] h-2.5 rounded-full" style="width: 45%"></div>
+              <div class="w-full bg-primary rounded-full h-4 border-2 border-dark">
+                <div class="bg-accent h-full rounded-full" style="width: 45%"></div>
               </div>
             </div>
-            <button class="w-full bg-[#B6FA46] hover:bg-opacity-90 text-[#011109] font-bold py-3 px-8 rounded-full text-lg transition-colors">
+            <button class="w-full bg-accent hover:bg-opacity-90 text-dark font-black py-4 px-8 rounded-md text-xl transition-all shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] hover:shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-dark">
               Pre-order Now
             </button>
-            <p class="text-sm text-center">30-day money-back guarantee</p>
+            <p class="text-sm text-center font-bold">30-day money-back guarantee</p>
           </div>
         </div>
-        <div class="lg:w-1/2">
-          <img src="/images/hero.png" alt="UpNotify Interface" class="w-full rounded-xl shadow-lg"/>
+        <div class="lg:w-1/2 relative">
+          <div class="relative w-full h-[500px] group">
+            <img src="/images/hero.png" alt="UpNotify Interface 1" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:-translate-y-4" />
+            <img src="/images/hero.png" alt="UpNotify Interface 2" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:-translate-y-2 top-4 left-4" />
+            <img src="/images/hero.png" alt="UpNotify Interface 3" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:translate-y-0 top-8 left-8" />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-accent w-32 h-32 -z-10 rounded-lg transform rotate-12"></div>
         </div>
       </section>
 
-      <section id="features" class="mb-20">
-        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">Cutting-Edge Features</h2>
+      <!-- Rest of the content remains the same -->
+	  <section id="features" class="mb-20">
+        <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Cutting-Edge Features</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Upwork RSS Compatibility</h3>
-            <p>Seamlessly replace your Upwork RSS feeds with our identical format, ensuring your existing integrations continue to work flawlessly.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Advanced Search Filtering</h3>
-            <p>Create complex search queries with multiple conditions, including keyword combinations, budget ranges, and client history filters.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">AI-Powered Job Matching</h3>
-            <p>Our intelligent algorithm learns from your preferences and bidding history to highlight jobs that best match your skills and interests.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Real-Time Notifications</h3>
-            <p>Get instant alerts for new jobs that meet your criteria, giving you a competitive edge in being the first to apply.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Integration Flexibility</h3>
-            <p>Works with popular tools like Zapier, IFTTT, or any platform that supports RSS feeds, allowing you to automate your job search workflow.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Customizable Alerts</h3>
-            <p>Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies.</p>
-          </div>
+          {[
+            { title: "Upwork RSS Compatibility", description: "Seamlessly replace your Upwork RSS feeds with our identical format, ensuring your existing integrations continue to work flawlessly." },
+            { title: "Advanced Search Filtering", description: "Create complex search queries with multiple conditions, including keyword combinations, budget ranges, and client history filters." },
+            { title: "AI-Powered Job Matching", description: "Our intelligent algorithm learns from your preferences and bidding history to highlight jobs that best match your skills and interests." },
+            { title: "Real-Time Notifications", description: "Get instant alerts for new jobs that meet your criteria, giving you a competitive edge in being the first to apply." },
+            { title: "Integration Flexibility", description: "Works with popular tools like Zapier, IFTTT, or any platform that supports RSS feeds, allowing you to automate your job search workflow." },
+            { title: "Customizable Alerts", description: "Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies." }
+          ].map((feature, index) => (
+            <div class="bg-primary p-6 border-4 border-dark rounded-lg transform hover:rotate-1 transition-transform">
+              <h3 class="text-xl font-bold text-dark mb-4">{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="how-it-works" class="mb-20">
-        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">How UpNotify Elevates Your Freelancing</h2>
-        <div class="bg-white rounded-lg p-8 shadow-lg max-w-2xl mx-auto">
-          <ol class="list-decimal list-inside space-y-4 text-lg">
-            <li>Sign up for UpNotify and create your advanced search profile</li>
-            <li>Customize your AI preferences to match your skills and interests</li>
-            <li>Integrate with your favorite tools using our RSS feed or API</li>
-            <li>Receive highly relevant job notifications in real-time</li>
-            <li>Apply to jobs faster, increasing your chances of landing gigs</li>
-            <li>Continuously refine your search with our adaptive AI system</li>
+        <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">How UpNotify Elevates Your Freelancing</h2>
+        <div class="bg-primary p-8 border-4 border-dark rounded-lg max-w-2xl mx-auto transform rotate-1 hover:rotate-0 transition-transform">
+          <ol class="list-none space-y-4 text-lg">
+            {[
+              "Sign up for UpNotify and create your advanced search profile",
+              "Customize your AI preferences to match your skills and interests",
+              "Integrate with your favorite tools using our RSS feed or API",
+              "Receive highly relevant job notifications in real-time",
+              "Apply to jobs faster, increasing your chances of landing gigs",
+              "Continuously refine your search with our adaptive AI system"
+            ].map((step, index) => (
+              <li class="flex items-start">
+                <span class="text-accent font-black text-2xl mr-4">{index + 1}.</span>
+                <span>{step}</span>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
 
       <section id="faq" class="mb-20">
-        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">Frequently Asked Questions</h2>
+        <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Frequently Asked Questions</h2>
         <div class="space-y-8 max-w-3xl mx-auto">
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">How does UpNotify's AI-powered filtering work?</h3>
-            <p>Our AI analyzes your profile, past bidding history, and job preferences to intelligently filter and rank job postings. It learns from your interactions to continuously improve job matches over time.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Can I still use UpNotify with my existing integrations?</h3>
-            <p>Absolutely! UpNotify provides an RSS feed compatible with the deprecated Upwork format. Simply replace your old Upwork RSS URL with your new UpNotify URL, and your existing integrations will continue to work seamlessly.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">What makes UpNotify's advanced search better than Upwork's built-in search?</h3>
-            <p>UpNotify offers more granular control over search parameters, AI-powered relevance scoring, and the ability to create complex, multi-condition searches that aren't possible with Upwork's standard search.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">How many search profiles can I have?</h3>
-            <p>The current pre-order offer includes 1 advanced search profile. We plan to introduce tiers supporting multiple search profiles in the future.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-dark mb-4">Is my data safe with UpNotify?</h3>
-            <p>We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties.</p>
-          </div>
+          {[
+            { question: "How does UpNotify's AI-powered filtering work?", answer: "Our AI analyzes your profile, past bidding history, and job preferences to intelligently filter and rank job postings. It learns from your interactions to continuously improve job matches over time." },
+            { question: "Can I still use UpNotify with my existing integrations?", answer: "Absolutely! UpNotify provides an RSS feed compatible with the deprecated Upwork format. Simply replace your old Upwork RSS URL with your new UpNotify URL, and your existing integrations will continue to work seamlessly." },
+            { question: "What makes UpNotify's advanced search better than Upwork's built-in search?", answer: "UpNotify offers more granular control over search parameters, AI-powered relevance scoring, and the ability to create complex, multi-condition searches that aren't possible with Upwork's standard search." },
+            { question: "How many search profiles can I have?", answer: "The current pre-order offer includes 1 advanced search profile. We plan to introduce tiers supporting multiple search profiles in the future." },
+            { question: "Is my data safe with UpNotify?", answer: "We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties." }
+          ].map((item) => (
+            <div class="bg-primary p-6 border-4 border-dark rounded-lg transform hover:-rotate-1 transition-transform">
+              <h3 class="text-xl font-bold text-dark mb-4">{item.question}</h3>
+              <p>{item.answer}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section class="text-center mb-20">
-        <h2 class="text-3xl font-semibold text-dark mb-6">Ready to Revolutionize Your Job Search?</h2>
-        <p class="text-xl mb-8">Secure your spot now or sign up to stay updated on our launch.</p>
+        <h2 class="text-4xl font-black text-dark mb-6 transform -rotate-1">Ready to Revolutionize Your Job Search?</h2>
+        <p class="text-xl mb-8 font-medium">Secure your spot now or sign up to stay updated on our launch.</p>
         <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button class="bg-accent hover:bg-opacity-80 text-dark font-bold py-3 px-8 rounded-full text-lg transition-colors">
+          <button class="bg-accent hover:bg-opacity-90 text-dark font-black py-3 px-8 rounded-md text-lg transition-colors transform hover:translate-x-1 hover:-translate-y-1 border-2 border-dark">
             Pre-order Now
           </button>
           <div class="relative">
-            <input type="email" placeholder="Enter your email" class="py-3 px-6 rounded-full text-lg border-2 border-secondary bg-white text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" />
-            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark text-primary px-4 py-1 rounded-full text-sm hover:bg-opacity-80 transition-colors">
+            <input type="email" placeholder="Enter your email" class="py-3 px-6 rounded-md text-lg border-2 border-dark bg-primary text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" />
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark text-primary px-4 py-1 rounded-md text-sm hover:bg-opacity-80 transition-colors">
               Notify Me
             </button>
           </div>
@@ -150,11 +159,38 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
 
     </main>
 
-    <footer class="bg-[#011109] py-8 mt-auto">
-      <div class="container mx-auto px-4 text-center text-white">
-        <p>&copy; 2024 UpNotify. All rights reserved.</p>
-        <p class="mt-2">Empowering freelancers with intelligent job notifications.</p>
+    <footer class="bg-dark py-8 mt-auto border-t-4 border-accent">
+      <div class="container mx-auto px-4 text-center text-primary">
+        <p class="font-bold">&copy; 2024 UpNotify. All rights reserved.</p>
+        <p class="mt-2 font-medium">Empowering freelancers with intelligent job notifications.</p>
       </div>
     </footer>
   </div>
 </Layout>
+
+<style>
+  /* Add this to your global styles or in a <style> tag in your Layout component */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .group:hover img {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .group:hover img:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .group:hover img:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+</style>
