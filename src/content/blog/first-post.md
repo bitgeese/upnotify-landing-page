@@ -60,4 +60,4 @@ Don't let Upwork's RSS deprecation slow you down. With UpNotify, you're not just
 
 Stay tuned for more updates as we approach our launch date. Together, we'll ensure that August 20, 2024, marks not the end of efficient job searching on Upwork, but the beginning of an even more powerful era for freelancers everywhere.
 
-Ready to secure your competitive edge? [Pre-order UpNotify today](/preorder) and be among the first to experience the future of Upwork job searching!
+Ready to secure your competitive edge? [Pre-order UpNotify today](https://buy.stripe.com/8wMdRX6JvggV7Kg288) and be among the first to experience the future of Upwork job searching!
