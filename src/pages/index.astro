@@ -60,29 +60,3 @@ const description = "UpNotify is coming soon! Keep your Upwork job notifications
     </footer>
   </div>
 </Layout>
-
-<script>
-  // Inline script for Alpine.js
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('countdown', () => ({
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-      init() {
-        this.countdown();
-        setInterval(() => this.countdown(), 1000);
-      },
-      countdown() {
-        const launchDate = new Date('2024-09-01T00:00:00').getTime();
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-
-        this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      }
-    }));
-  });
-</script>
