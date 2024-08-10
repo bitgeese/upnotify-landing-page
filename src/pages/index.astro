@@ -1,62 +1,160 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = "UpNotify - Coming Soon | Preserve Upwork RSS Feeds";
-const description = "UpNotify is coming soon! Keep your Upwork job notifications intact. We save Upwork's RSS feeds in their original format, ensuring your integrations continue to work seamlessly.";
+const title = "UpNotify - AI-Powered Upwork Job Alerts | Coming Soon";
+const description = "UpNotify revolutionizes Upwork job searches with AI-powered filtering and advanced search capabilities. Pre-order now and never miss your perfect gig again.";
 ---
 
 <Layout title={title} description={description}>
-  <div class="min-h-screen flex flex-col justify-center items-center px-4">
-    <main class="max-w-4xl w-full bg-white rounded-lg shadow-xl p-8 m-4">
-      <h1 class="text-5xl font-bold text-center text-blue-600 mb-4">UpNotify</h1>
-      <p class="text-2xl text-center text-gray-600 mb-8">Coming Soon!</p>
-      
-      <div x-data="countdown" class="flex justify-center space-x-4 mb-8">
-        <div class="text-center">
-          <span x-text="days" class="text-4xl font-bold text-blue-500"></span>
-          <p class="text-gray-500">Days</p>
-        </div>
-        <div class="text-center">
-          <span x-text="hours" class="text-4xl font-bold text-blue-500"></span>
-          <p class="text-gray-500">Hours</p>
-        </div>
-        <div class="text-center">
-          <span x-text="minutes" class="text-4xl font-bold text-blue-500"></span>
-          <p class="text-gray-500">Minutes</p>
-        </div>
-        <div class="text-center">
-          <span x-text="seconds" class="text-4xl font-bold text-blue-500"></span>
-          <p class="text-gray-500">Seconds</p>
-        </div>
+  <div class="min-h-screen flex flex-col bg-[#f1f6fc] text-[#313B37]">
+    <header class="bg-[#011109] py-4 px-6 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-2xl text-[#B6FA46]">UpNotify</span>
       </div>
+      <nav class="space-x-6">
+        <a href="#features" class="text-white hover:text-[#B6FA46] transition-colors">Features</a>
+        <a href="#how-it-works" class="text-white hover:text-[#B6FA46] transition-colors">How It Works</a>
+        <a href="#faq" class="text-white hover:text-[#B6FA46] transition-colors">FAQ</a>
+      </nav>
+      <button class="bg-[#B6FA46] text-[#011109] px-6 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-colors">
+        Pre-order now
+      </button>
+    </header>
 
-      <h2 class="text-3xl font-semibold text-center mb-4">Keep Your Upwork Notifications Flowing</h2>
-      <p class="text-lg text-gray-700 mb-6">
-        Upwork is removing its RSS feeds, but don't worry! UpNotify is here to help freelancers like you stay on top of new job opportunities.
-      </p>
-      <p class="text-lg text-gray-700 mb-6">
-        Our service saves Upwork's RSS feeds in their original format, allowing all your existing integrations to continue working seamlessly. Simply swap your current RSS feed link with ours, and you're good to go!
-      </p>
-      
-      <div class="bg-gray-100 rounded-lg p-6 mb-8">
-        <h3 class="text-2xl font-semibold mb-4">Key Features:</h3>
-        <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-          <li>Preserves Upwork's original RSS feed format</li>
-          <li>Compatible with your existing integrations</li>
-          <li>Real-time job notifications</li>
-          <li>Easy setup - just change the feed URL</li>
-        </ul>
-      </div>
+    <main class="flex-grow container mx-auto px-4 py-12">
+      <section class="flex flex-col lg:flex-row items-center justify-between mb-20 space-y-8 lg:space-y-0 lg:space-x-12">
+        <div class="lg:w-1/2 space-y-8">
+          <div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-[#011109]">
+              Supercharge Your Upwork Job Search
+            </h1>
+            <p class="text-xl mb-8">
+              UpNotify goes beyond simple RSS feeds. Our AI-powered platform ensures you never miss the perfect gig, 
+              with advanced filtering and intelligent job matching tailored for freelancers and agencies.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-2xl font-semibold text-[#011109]">Exclusive Pre-Order Offer</h3>
+            <p class="font-medium">Lock in our lowest price forever!</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Pre-order price: <span class="text-[#011109] font-bold">$6/month</span> (lifetime)</li>
+              <li>Regular price: $9/month</li>
+              <li>1 advanced search profile with AI-powered filtering</li>
+            </ul>
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Pre-order Progress</span>
+                <span class="font-semibold">50 spots left</span>
+              </div>
+              <div class="w-full bg-white rounded-full h-2.5">
+                <div class="bg-[#B6FA46] h-2.5 rounded-full" style="width: 45%"></div>
+              </div>
+            </div>
+            <button class="w-full bg-[#B6FA46] hover:bg-opacity-90 text-[#011109] font-bold py-3 px-8 rounded-full text-lg transition-colors">
+              Pre-order Now
+            </button>
+            <p class="text-sm text-center">30-day money-back guarantee</p>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <img src="/images/hero.png" alt="UpNotify Interface" class="w-full rounded-xl shadow-lg"/>
+        </div>
+      </section>
 
-      <div class="text-center">
-        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
-          Notify Me When It's Ready
-        </a>
-      </div>
+      <section id="features" class="mb-20">
+        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">Cutting-Edge Features</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Upwork RSS Compatibility</h3>
+            <p>Seamlessly replace your Upwork RSS feeds with our identical format, ensuring your existing integrations continue to work flawlessly.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Advanced Search Filtering</h3>
+            <p>Create complex search queries with multiple conditions, including keyword combinations, budget ranges, and client history filters.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">AI-Powered Job Matching</h3>
+            <p>Our intelligent algorithm learns from your preferences and bidding history to highlight jobs that best match your skills and interests.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Real-Time Notifications</h3>
+            <p>Get instant alerts for new jobs that meet your criteria, giving you a competitive edge in being the first to apply.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Integration Flexibility</h3>
+            <p>Works with popular tools like Zapier, IFTTT, or any platform that supports RSS feeds, allowing you to automate your job search workflow.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Customizable Alerts</h3>
+            <p>Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="mb-20">
+        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">How UpNotify Elevates Your Freelancing</h2>
+        <div class="bg-white rounded-lg p-8 shadow-lg max-w-2xl mx-auto">
+          <ol class="list-decimal list-inside space-y-4 text-lg">
+            <li>Sign up for UpNotify and create your advanced search profile</li>
+            <li>Customize your AI preferences to match your skills and interests</li>
+            <li>Integrate with your favorite tools using our RSS feed or API</li>
+            <li>Receive highly relevant job notifications in real-time</li>
+            <li>Apply to jobs faster, increasing your chances of landing gigs</li>
+            <li>Continuously refine your search with our adaptive AI system</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="faq" class="mb-20">
+        <h2 class="text-3xl font-semibold text-dark mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-8 max-w-3xl mx-auto">
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">How does UpNotify's AI-powered filtering work?</h3>
+            <p>Our AI analyzes your profile, past bidding history, and job preferences to intelligently filter and rank job postings. It learns from your interactions to continuously improve job matches over time.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Can I still use UpNotify with my existing integrations?</h3>
+            <p>Absolutely! UpNotify provides an RSS feed compatible with the deprecated Upwork format. Simply replace your old Upwork RSS URL with your new UpNotify URL, and your existing integrations will continue to work seamlessly.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">What makes UpNotify's advanced search better than Upwork's built-in search?</h3>
+            <p>UpNotify offers more granular control over search parameters, AI-powered relevance scoring, and the ability to create complex, multi-condition searches that aren't possible with Upwork's standard search.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">How many search profiles can I have?</h3>
+            <p>The current pre-order offer includes 1 advanced search profile. We plan to introduce tiers supporting multiple search profiles in the future.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Is my data safe with UpNotify?</h3>
+            <p>We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center mb-20">
+        <h2 class="text-3xl font-semibold text-dark mb-6">Ready to Revolutionize Your Job Search?</h2>
+        <p class="text-xl mb-8">Secure your spot now or sign up to stay updated on our launch.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <button class="bg-accent hover:bg-opacity-80 text-dark font-bold py-3 px-8 rounded-full text-lg transition-colors">
+            Pre-order Now
+          </button>
+          <div class="relative">
+            <input type="email" placeholder="Enter your email" class="py-3 px-6 rounded-full text-lg border-2 border-secondary bg-white text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" />
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark text-primary px-4 py-1 rounded-full text-sm hover:bg-opacity-80 transition-colors">
+              Notify Me
+            </button>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="mt-8 text-center text-gray-600">
-      <p>&copy; 2024 UpNotify. All rights reserved.</p>
+    <footer class="bg-[#011109] py-8 mt-auto">
+      <div class="container mx-auto px-4 text-center text-white">
+        <p>&copy; 2024 UpNotify. All rights reserved.</p>
+        <p class="mt-2">Empowering freelancers with intelligent job notifications.</p>
+      </div>
     </footer>
   </div>
 </Layout>

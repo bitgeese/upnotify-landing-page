@@ -11,7 +11,7 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,7 +24,7 @@ const { title, description } = Astro.props;
         basic: {
           title: title,
           type: "website",
-          image: "https://example.com/og-image.jpg",
+          image: "https://upnotify.com/og-image.jpg",
         }
       }}
       twitter={{
@@ -34,15 +34,16 @@ const { title, description } = Astro.props;
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
         meta: [
-          { name: "twitter:image", content: "https://example.com/twitter-image.jpg" },
+          { name: "twitter:image", content: "https://upnotify.com/twitter-image.jpg" },
           { name: "twitter:title", content: title },
           { name: "twitter:description", content: description },
+          { name: "theme-color", content: "#B6FA46" },
         ],
       }}
     />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
-  <body>
+  <body class="bg-primary text-secondary">
     <slot />
   </body>
 </html>
