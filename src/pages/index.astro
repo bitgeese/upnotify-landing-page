@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "UpNotify - Coming Soon | Preserve Upwork RSS Feeds";
+const description = "UpNotify is coming soon! Keep your Upwork job notifications intact. We save Upwork's RSS feeds in their original format, ensuring your integrations continue to work seamlessly.";
+---
+
+<Layout title={title} description={description}>
+  <div class="min-h-screen flex flex-col justify-center items-center px-4">
+    <main class="max-w-4xl w-full bg-white rounded-lg shadow-xl p-8 m-4">
+      <h1 class="text-5xl font-bold text-center text-blue-600 mb-4">UpNotify</h1>
+      <p class="text-2xl text-center text-gray-600 mb-8">Coming Soon!</p>
+      
+      <div x-data="countdown" class="flex justify-center space-x-4 mb-8">
+        <div class="text-center">
+          <span x-text="days" class="text-4xl font-bold text-blue-500"></span>
+          <p class="text-gray-500">Days</p>
+        </div>
+        <div class="text-center">
+          <span x-text="hours" class="text-4xl font-bold text-blue-500"></span>
+          <p class="text-gray-500">Hours</p>
+        </div>
+        <div class="text-center">
+          <span x-text="minutes" class="text-4xl font-bold text-blue-500"></span>
+          <p class="text-gray-500">Minutes</p>
+        </div>
+        <div class="text-center">
+          <span x-text="seconds" class="text-4xl font-bold text-blue-500"></span>
+          <p class="text-gray-500">Seconds</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-semibold text-center mb-4">Keep Your Upwork Notifications Flowing</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Upwork is removing its RSS feeds, but don't worry! UpNotify is here to help freelancers like you stay on top of new job opportunities.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Our service saves Upwork's RSS feeds in their original format, allowing all your existing integrations to continue working seamlessly. Simply swap your current RSS feed link with ours, and you're good to go!
+      </p>
+      
+      <div class="bg-gray-100 rounded-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Key Features:</h3>
+        <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
+          <li>Preserves Upwork's original RSS feed format</li>
+          <li>Compatible with your existing integrations</li>
+          <li>Real-time job notifications</li>
+          <li>Easy setup - just change the feed URL</li>
+        </ul>
+      </div>
+
+      <div class="text-center">
+        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          Notify Me When It's Ready
+        </a>
+      </div>
+    </main>
+
+    <footer class="mt-8 text-center text-gray-600">
+      <p>&copy; 2024 UpNotify. All rights reserved.</p>
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  // Inline script for Alpine.js
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('countdown', () => ({
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      init() {
+        this.countdown();
+        setInterval(() => this.countdown(), 1000);
+      },
+      countdown() {
+        const launchDate = new Date('2024-09-01T00:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      }
+    }));
+  });
+</script>
