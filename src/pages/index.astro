@@ -3,6 +3,20 @@ import Layout from '../layouts/Layout.astro';
 
 const title = "UpNotify - Advanced Upwork RSS and Powerful Job Search | Coming Soon";
 const description = "UpNotify restores Upwork's RSS functionality with enhanced filtering. Get real-time job alerts and use our powerful search tools to find your perfect gigs faster.";
+
+    function productData() {
+      return {
+        product: {},
+        async fetchProductData() {
+          const response = await fetch('https://stripe-fetch.maciej-janowski1.workers.dev');
+          if (response.ok) {
+            this.product = await response.json();
+          } else {
+            console.error('Failed to fetch product data');
+          }
+        }
+      }
+    }
 ---
 
 <Layout title={title} description={description}>
@@ -25,7 +39,7 @@ const description = "UpNotify restores Upwork's RSS functionality with enhanced 
       <div class="absolute top-0 left-0 w-20 h-20 bg-accent rounded-full opacity-50 -z-10 transform translate-x-8 translate-y-8"></div>
       <div class="absolute bottom-0 right-0 w-32 h-32 bg-accent opacity-50 -z-10 transform -translate-x-12 -translate-y-12 rotate-12"></div>
       
-      <section x-data="productData()" class="flex flex-col lg:flex-row items-center justify-between mb-20 space-y-8 lg:space-y-0 lg:space-x-12">
+      <section x-data="productData()" x-init="fetchProductData()" class="flex flex-col lg:flex-row items-center justify-between mb-20 space-y-8 lg:space-y-0 lg:space-x-12">
         <div class="lg:w-1/2 space-y-8">
           <div>
             <h1 class="text-5xl lg:text-6xl font-black mb-6 text-dark leading-tight transform -rotate-1">
@@ -203,20 +217,3 @@ const description = "UpNotify restores Upwork's RSS functionality with enhanced 
     animation-delay: 0.4s;
   }
 </style>
-
-
-<script>
-    function productData() {
-      return {
-        product: {},
-        async fetchProductData() {
-          const response = await fetch('https://stripe-fetch.maciej-janowski1.workers.dev');
-          if (response.ok) {
-            this.product = await response.json();
-          } else {
-            console.error('Failed to fetch product data');
-          }
-        }
-      }
-    }
-  </script>
