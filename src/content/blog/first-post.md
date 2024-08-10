@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPost.astro
 title: "UpNotify: Revolutionizing Upwork Job Searches After Upwork's RSS Deprecation"
 description: "Discover how UpNotify is preserving Upwork's RSS functionality and enhancing job search capabilities for freelancers. Learn about advanced filtering, AI-powered recommendations, and how to stay ahead in the competitive freelance market."
 pubDate: "2024-08-08"

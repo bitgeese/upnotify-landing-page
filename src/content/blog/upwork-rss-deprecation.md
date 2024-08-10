@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPost.astro
 title: "Upwork RSS Feed Deprecation: How UpNotify Solves Freelancers' Job Search Woes"
 description: "Learn about Upwork's RSS feed deprecation, its impact on freelancers, and how UpNotify provides an advanced solution for efficient job searching on Upwork."
 pubDate: "2024-08-10"
