@@ -1,11 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = "UpNotify - AI-Powered Upwork Job Alerts | Coming Soon";
-const description = "UpNotify revolutionizes Upwork job searches with AI-powered filtering and advanced search capabilities. Pre-order now and never miss your perfect gig again.";
+const title = "UpNotify - Advanced Upwork RSS and Powerful Job Search | Coming Soon";
+const description = "UpNotify restores Upwork's RSS functionality with enhanced filtering. Get real-time job alerts and use our powerful search tools to find your perfect gigs faster.";
 ---
-
-
 
 <Layout title={title} description={description}>
   <div class="min-h-screen flex flex-col bg-primary text-secondary font-sans">
@@ -31,11 +29,10 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
         <div class="lg:w-1/2 space-y-8">
           <div>
             <h1 class="text-5xl lg:text-6xl font-black mb-6 text-dark leading-tight transform -rotate-1">
-              Supercharge Your Upwork Job Search
+              Never Miss an Opportunity: Advanced RSS and Powerful Search
             </h1>
             <p class="text-xl mb-8 font-medium">
-              UpNotify goes beyond simple RSS feeds. Our AI-powered platform ensures you never miss the perfect gig, 
-              with advanced filtering and intelligent job matching tailored for freelancers and agencies.
+              UpNotify restores the RSS functionality <span class="font-semibold text-black">Upwork</span> removed, enhanced with <span class="font-semibold text-black">advanced filtering.</span> Get real-time job alerts and use our powerful search tools to find your <span class="font-semibold text-black">perfect gigs</span> faster.
             </p>
           </div>
           <div class="space-y-6 bg-primary p-8 border-4 border-dark rounded-lg transform rotate-1 hover:rotate-0 transition-transform">
@@ -52,16 +49,16 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
               </li>
               <li class="flex items-center">
                 <span class="text-accent mr-2">&#9654;</span>
-                1 advanced search profile with AI-powered filtering
+                1 advanced search profile with powerful filtering
               </li>
             </ul>
             <div>
               <div class="flex justify-between items-center mb-2 font-bold">
                 <span>Pre-order Progress</span>
-                <span>50 spots left</span>
+                <span>48 spots left</span>
               </div>
               <div class="w-full bg-primary rounded-full h-4 border-2 border-dark">
-                <div class="bg-accent h-full rounded-full" style="width: 45%"></div>
+                <div class="bg-accent h-full rounded-full" style="width: 2%"></div>
               </div>
             </div>
             <button class="w-full bg-accent hover:bg-opacity-90 text-dark font-black py-4 px-8 rounded-md text-xl transition-all shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] hover:shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-dark">
@@ -80,17 +77,16 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
         </div>
       </section>
 
-      <!-- Rest of the content remains the same -->
-	  <section id="features" class="mb-20">
+      <section id="features" class="mb-20">
         <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Cutting-Edge Features</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { title: "Upwork RSS Compatibility", description: "Seamlessly replace your Upwork RSS feeds with our identical format, ensuring your existing integrations continue to work flawlessly." },
-            { title: "Advanced Search Filtering", description: "Create complex search queries with multiple conditions, including keyword combinations, budget ranges, and client history filters." },
-            { title: "AI-Powered Job Matching", description: "Our intelligent algorithm learns from your preferences and bidding history to highlight jobs that best match your skills and interests." },
-            { title: "Real-Time Notifications", description: "Get instant alerts for new jobs that meet your criteria, giving you a competitive edge in being the first to apply." },
-            { title: "Integration Flexibility", description: "Works with popular tools like Zapier, IFTTT, or any platform that supports RSS feeds, allowing you to automate your job search workflow." },
-            { title: "Customizable Alerts", description: "Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies." }
+            { title: "Upwork RSS Restoration", description: "Revive your Upwork RSS feeds with our identical format. Seamlessly integrate with your existing tools and workflows." },
+            { title: "Advanced Search Capabilities", description: "Create complex, multi-condition searches beyond Upwork's standard options. Filter by keyword combinations, budget ranges, client history, and more." },
+            { title: "Real-Time Notifications", description: "Receive instant alerts for new jobs matching your criteria. Be among the first to apply and increase your chances of landing gigs." },
+            { title: "Integration Flexibility", description: "Works with Zapier, IFTTT, or any RSS-compatible platform. Automate your job search process effortlessly." },
+            { title: "Customizable Alert Profiles", description: "Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies." },
+            { title: "AI-Enhanced Filtering", description: "Optional AI assistance to refine your searches based on your preferences and bidding history." }
           ].map((feature, index) => (
             <div class="bg-primary p-6 border-4 border-dark rounded-lg transform hover:rotate-1 transition-transform">
               <h3 class="text-xl font-bold text-dark mb-4">{feature.title}</h3>
@@ -105,12 +101,12 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
         <div class="bg-primary p-8 border-4 border-dark rounded-lg max-w-2xl mx-auto transform rotate-1 hover:rotate-0 transition-transform">
           <ol class="list-none space-y-4 text-lg">
             {[
-              "Sign up for UpNotify and create your advanced search profile",
-              "Customize your AI preferences to match your skills and interests",
-              "Integrate with your favorite tools using our RSS feed or API",
-              "Receive highly relevant job notifications in real-time",
-              "Apply to jobs faster, increasing your chances of landing gigs",
-              "Continuously refine your search with our adaptive AI system"
+              "Sign up for UpNotify and restore your Upwork RSS functionality.",
+              "Create custom search profiles with our advanced filtering options.",
+              "Integrate seamlessly with your favorite tools using our RSS feed.",
+              "Receive relevant job notifications in real-time.",
+              "Apply to jobs faster, increasing your chances of success.",
+              "Refine your searches for even better results over time."
             ].map((step, index) => (
               <li class="flex items-start">
                 <span class="text-accent font-black text-2xl mr-4">{index + 1}.</span>
@@ -125,9 +121,9 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
         <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Frequently Asked Questions</h2>
         <div class="space-y-8 max-w-3xl mx-auto">
           {[
-            { question: "How does UpNotify's AI-powered filtering work?", answer: "Our AI analyzes your profile, past bidding history, and job preferences to intelligently filter and rank job postings. It learns from your interactions to continuously improve job matches over time." },
-            { question: "Can I still use UpNotify with my existing integrations?", answer: "Absolutely! UpNotify provides an RSS feed compatible with the deprecated Upwork format. Simply replace your old Upwork RSS URL with your new UpNotify URL, and your existing integrations will continue to work seamlessly." },
-            { question: "What makes UpNotify's advanced search better than Upwork's built-in search?", answer: "UpNotify offers more granular control over search parameters, AI-powered relevance scoring, and the ability to create complex, multi-condition searches that aren't possible with Upwork's standard search." },
+            { question: "How does UpNotify's RSS feed compare to Upwork's deprecated feed?", answer: "Our RSS feed is designed to be fully compatible with Upwork's deprecated format. You can simply replace your old Upwork RSS URL with your new UpNotify URL, ensuring all your existing integrations continue to work without any modifications." },
+            { question: "What makes UpNotify's advanced search better than Upwork's built-in search?", answer: "UpNotify offers more granular control over search parameters, allowing you to create complex, multi-condition searches that aren't possible with Upwork's standard search. This includes combining multiple keywords, setting specific budget ranges, filtering by client history, and more." },
+            { question: "Can I use UpNotify without the AI features?", answer: "Absolutely! While we offer AI-enhanced filtering as an option, our core functionality - the RSS feed restoration and advanced search capabilities - works independently of any AI features. You have full control over which features you use." },
             { question: "How many search profiles can I have?", answer: "The current pre-order offer includes 1 advanced search profile. We plan to introduce tiers supporting multiple search profiles in the future." },
             { question: "Is my data safe with UpNotify?", answer: "We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties." }
           ].map((item) => (
@@ -154,17 +150,17 @@ const description = "UpNotify revolutionizes Upwork job searches with AI-powered
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="bg-dark py-8 mt-auto border-t-4 border-accent">
       <div class="container mx-auto px-4 text-center text-primary">
         <p class="font-bold">&copy; 2024 UpNotify. All rights reserved.</p>
-        <p class="mt-2 font-medium">Empowering freelancers with intelligent job notifications.</p>
+        <p class="mt-2 font-medium">Empowering freelancers with advanced Upwork job notifications.</p>
       </div>
     </footer>
   </div>
 </Layout>
+
 
 <style>
   /* Add this to your global styles or in a <style> tag in your Layout component */
