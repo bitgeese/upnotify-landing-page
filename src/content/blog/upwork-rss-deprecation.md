@@ -3,7 +3,7 @@ title: "Upwork RSS Feed Deprecation: How UpNotify Solves Freelancers' Job Search
 description: "Learn about Upwork's RSS feed deprecation, its impact on freelancers, and how UpNotify provides an advanced solution for efficient job searching on Upwork."
 pubDate: "2024-08-10"
 lastmod: "2024-08-10"
-heroImage: "/blog-placeholder-1.jpg"
+heroImage: "/images/og.png"
 ---
 
 As a freelancer, staying ahead of the curve is crucial for success. But what happens when the tools you rely on suddenly disappear? On August 20th, Upwork is set to deprecate its RSS feed feature, leaving many freelancers scrambling for alternatives. In this post, we'll explore the impact of this change, current solutions, and introduce you to UpNotify – the ultimate tool to keep your Upwork job search efficient and effective.
