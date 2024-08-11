@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
 
 const title = "UpNotify - Advanced Upwork RSS and Powerful Job Search | Coming Soon";
 const description = "UpNotify restores Upwork's RSS functionality with enhanced filtering. Get real-time job alerts and use our powerful search tools to find your perfect gigs faster.";
@@ -12,19 +13,7 @@ const widthPercentage = (sales / 50) * 100;
 ---
 <Layout title={title} description={description}>
 	<div class="min-h-screen flex flex-col bg-primary text-secondary font-sans">
-	  <header class="bg-dark py-4 px-6 flex justify-between items-center border-b-4 border-accent">
-		<div class="flex items-center space-x-2">
-		  <span class="font-bold text-3xl text-accent transform -rotate-2">UpNotify</span>
-		</div>
-		<nav class="space-x-6">
-		  <a href="#features" class="text-primary hover:text-accent transition-colors font-bold">Features</a>
-		  <a href="#how-it-works" class="text-primary hover:text-accent transition-colors font-bold">How It Works</a>
-		  <a href="#faq" class="text-primary hover:text-accent transition-colors font-bold">FAQ</a>
-		</nav>
-		<button class="bg-accent text-dark px-6 py-2 rounded-md text-sm font-bold hover:bg-opacity-90 transition-all shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:shadow-[2px_2px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[2px] hover:translate-y-[2px] border-2 border-dark">
-		  <a href="#signup">Join Waitlist</a>
-		</button>
-	  </header>
+	  <Navigation/>
   
 	  <main class="flex-grow container mx-auto px-4 py-12 relative">
 		<div class="absolute top-0 left-0 w-20 h-20 bg-accent rounded-full opacity-50 -z-10 transform translate-x-8 translate-y-8"></div>
