@@ -1,0 +1,39 @@
+---
+import Heading from "../components/Heading.astro";
+---
+<div id="howto" class="bg-lime px-6 py-32 lg:px-8">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+      <Heading color="text-black" label="How UpNotify Elevates Your Freelancing"></Heading>
+      <p class="mt-6 text-lg font-mono">Learn how to use Upnotify in 6 simple steps, and bring your freelancing on another level</p>
+      <div class="mt-10 border-8 border-dark shadow-gold-lg bg-pearl p-8 rounded-2xl">
+        <ol role="list" class="space-y-8 text-dark">
+          {[
+            "Sign up for UpNotify and restore your Upwork RSS functionality.",
+            "Create custom search profiles with our advanced filtering options.",
+            "Integrate seamlessly with your favorite tools using our RSS feed.",
+            "Receive relevant job notifications in real-time.",
+            "Apply to jobs faster, increasing your chances of success.",
+            "Refine your searches for even better results over time."
+            ].map((step, index) => (
+            <li class="flex items-start gap-x-3">
+              <span class="text-gold font-black text-2xl">{index + 1}.</span>
+              <span class="font-mono text-lg">{step}</span>
+            </li>
+            ))}
+          
+          
+        </ol>
+      </div>
+      <figure class="hidden mt-16">
+        <img class="aspect-video rounded-2xl border-8 border-black shadow-gold-lg bg-lime object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3" alt="">
+        <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-black/60">
+          <svg class="mt-0.5 h-5 w-5 flex-none text-black/70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+          </svg>
+          Video presentation, showing just how easy it is to set up your RSS Feed
+        </figcaption>
+      </figure>
+     
+    </div>
+  </div>
+  

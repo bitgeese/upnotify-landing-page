@@ -1,133 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
+import NavBar from '../components/NavBar.astro';
+import Hero from '../components/Hero.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import HowItWorksSection from '../components/HowItWorksSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
+import Footer from '../components/Footer.astro';
 
 const title = "UpNotify - Advanced Upwork RSS and Powerful Job Search | Coming Soon";
 const description = "UpNotify restores Upwork's RSS functionality with enhanced filtering. Get real-time job alerts and use our powerful search tools to find your perfect gigs faster.";
 
-const response = await fetch('https://stripe-fetch.maciej-janowski1.workers.dev');
-const data = await response.json();
-const sales = data.sales + 2;
-const widthPercentage = (sales / 50) * 100;
-
 ---
 <Layout title={title} description={description}>
-	<div class="min-h-screen flex flex-col bg-primary text-secondary font-sans">
-	  <Navigation/>
-  
-	  <main class="flex-grow container mx-auto px-4 py-12 relative">
-		<div class="absolute top-0 left-0 w-20 h-20 bg-accent rounded-full opacity-50 -z-10 transform translate-x-8 translate-y-8"></div>
-		<div class="absolute bottom-0 right-0 w-32 h-32 bg-accent opacity-50 -z-10 transform -translate-x-12 -translate-y-12 rotate-12"></div>
-		
-		<section class="flex flex-col lg:flex-row items-center justify-between mb-20 space-y-8 lg:space-y-0 lg:space-x-12">
-		  <div class="lg:w-1/2 space-y-8">
-			<div>
-			  <h1 class="text-5xl lg:text-6xl font-black mb-6 text-dark leading-tight transform -rotate-1">
-				Never Miss an Opportunity: Advanced RSS and Powerful Search
-			  </h1>
-			  <p class="text-xl mb-8 font-medium">
-				UpNotify restores the RSS functionality <span class="font-semibold text-black">Upwork</span> removed, enhanced with <span class="font-semibold text-black">advanced filtering.</span> Get real-time job alerts and use our powerful search tools to find your <span class="font-semibold text-black">perfect gigs</span> faster.
-			  </p>
-			</div>
-			<div id="signup" class="space-y-6 bg-primary p-8 border-4 border-dark rounded-lg transform rotate-1 hover:rotate-0 transition-transform">
-			  <h3 class="text-3xl font-black text-dark">Join the Waitlist</h3>
-			  <p class="font-bold">Be the first to know when we launch!</p>
-			  <form class="space-y-4 plausible-event-name=Form+Submit" name="contact" action="https://worker.maciej-janowski1.workers.dev" method="POST">
-				<input type="hidden" name="form-name" value="contact" />
-				<input type="email" name="email" placeholder="Enter your email" class="w-full py-3 px-6 rounded-md text-lg border-2 border-dark bg-primary text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" required />
-				<button type="submit" class="w-full bg-accent hover:bg-opacity-90 text-dark font-black py-4 px-8 rounded-md text-xl transition-all shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] hover:shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-dark">
-				  Join Waitlist
-				</button>
-			  </form>
-			</div>
-		  </div>
-		  <div class="lg:w-1/2 relative">
-			<div class="relative w-full h-[500px] group">
-			  <img src="/images/hero.png" alt="UpNotify Interface 1" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:-translate-y-4" />
-			  <img src="/images/hero.png" alt="UpNotify Interface 2" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:-translate-y-2 top-4 left-4" />
-			  <img src="/images/hero.png" alt="UpNotify Interface 3" class="absolute w-full rounded-lg border-4 border-dark shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] transition-all duration-300 group-hover:translate-y-0 top-8 left-8" />
-			</div>
-			<div class="absolute -bottom-4 -right-4 bg-accent w-32 h-32 -z-10 rounded-lg transform rotate-12"></div>
-		  </div>
-		</section>
-  
-		<section id="features" class="mb-20">
-		  <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Cutting-Edge Features</h2>
-		  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{[
-			  { title: "Upwork RSS Restoration", description: "Revive your Upwork RSS feeds with our identical format. Seamlessly integrate with your existing tools and workflows." },
-			  { title: "Advanced Search Capabilities", description: "Create complex, multi-condition searches beyond Upwork's standard options. Filter by keyword combinations, budget ranges, client history, and more." },
-			  { title: "Real-Time Notifications", description: "Receive instant alerts for new jobs matching your criteria. Be among the first to apply and increase your chances of landing gigs." },
-			  { title: "Integration Flexibility", description: "Works with Zapier, IFTTT, or any RSS-compatible platform. Automate your job search process effortlessly." },
-			  { title: "Customizable Alert Profiles", description: "Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies." },
-			  { title: "AI-Enhanced Filtering", description: "Optional AI assistance to refine your searches based on your preferences and bidding history." }
-			].map((feature, index) => (
-			  <div class="bg-primary p-6 border-4 border-dark rounded-lg transform hover:rotate-1 transition-transform">
-				<h3 class="text-xl font-bold text-dark mb-4">{feature.title}</h3>
-				<p>{feature.description}</p>
-			  </div>
-			))}
-		  </div>
-		</section>
-  
-		<section id="how-it-works" class="mb-20">
-		  <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">How UpNotify Elevates Your Freelancing</h2>
-		  <div class="bg-primary p-8 border-4 border-dark rounded-lg max-w-2xl mx-auto transform rotate-1 hover:rotate-0 transition-transform">
-			<ol class="list-none space-y-4 text-lg">
-			  {[
-				"Sign up for UpNotify and restore your Upwork RSS functionality.",
-				"Create custom search profiles with our advanced filtering options.",
-				"Integrate seamlessly with your favorite tools using our RSS feed.",
-				"Receive relevant job notifications in real-time.",
-				"Apply to jobs faster, increasing your chances of success.",
-				"Refine your searches for even better results over time."
-			  ].map((step, index) => (
-				<li class="flex items-start">
-				  <span class="text-accent font-black text-2xl mr-4">{index + 1}.</span>
-				  <span>{step}</span>
-				</li>
-			  ))}
-			</ol>
-		  </div>
-		</section>
-  
-		<section id="faq" class="mb-20">
-		  <h2 class="text-4xl font-black text-dark mb-12 text-center transform -rotate-1">Frequently Asked Questions</h2>
-		  <div class="space-y-8 max-w-3xl mx-auto">
-			{[
-			  { question: "How does UpNotify's RSS feed compare to Upwork's deprecated feed?", answer: "Our RSS feed is designed to be fully compatible with Upwork's deprecated format. You can simply replace your old Upwork RSS URL with your new UpNotify URL, ensuring all your existing integrations continue to work without any modifications." },
-			  { question: "What makes UpNotify's advanced search better than Upwork's built-in search?", answer: "UpNotify offers more granular control over search parameters, allowing you to create complex, multi-condition searches that aren't possible with Upwork's standard search. This includes combining multiple keywords, setting specific budget ranges, filtering by client history, and more." },
-			  { question: "Can I use UpNotify without the AI features?", answer: "Absolutely! While we offer AI-enhanced filtering as an option, our core functionality - the RSS feed restoration and advanced search capabilities - works independently of any AI features. You have full control over which features you use." },
-			  { question: "How many search profiles can I have?", answer: "We plan to offer multiple tiers supporting different numbers of search profiles. More details will be available closer to launch." },
-			  { question: "Is my data safe with UpNotify?", answer: "We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties." }
-			].map((item) => (
-			  <div class="bg-primary p-6 border-4 border-dark rounded-lg transform hover:-rotate-1 transition-transform">
-				<h3 class="text-xl font-bold text-dark mb-4">{item.question}</h3>
-				<p>{item.answer}</p>
-			  </div>
-			))}
-		  </div>
-		</section>
-  
-		<section class="text-center mb-20">
-		  <h2 class="text-4xl font-black text-dark mb-6 transform -rotate-1">Ready to Revolutionize Your Job Search?</h2>
-		  <p class="text-xl mb-8 font-medium">Join our waitlist to stay updated on our launch and be the first to access UpNotify.</p>
-		  <form class="max-w-md mx-auto space-y-4 plausible-event-name=Form+Submit" name="contact" action="https://worker.maciej-janowski1.workers.dev" method="POST">
-			<input type="hidden" name="form-name" value="contact" />
-			<input type="email" name="email" placeholder="Enter your email" class="w-full py-3 px-6 rounded-md text-lg border-2 border-dark bg-primary text-secondary placeholder-secondary placeholder-opacity-50 focus:outline-none focus:border-accent" required />
-			<button type="submit" class="w-full bg-accent hover:bg-opacity-90 text-dark font-black py-4 px-8 rounded-md text-xl transition-all shadow-[8px_8px_0px_0px_rgba(1,17,9,1)] hover:shadow-[4px_4px_0px_0px_rgba(1,17,9,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-dark">
-			  Join Waitlist
-			</button>
-		  </form>
-		</section>
+	<div class="">
+	  <NavBar/>
+	  <main>
+		<Hero/>
+		<FeatureGrid/>
+		<HowItWorksSection/>
+		<FAQSection/>
+		<WaitlistForm/>
 	  </main>
-  
-	  <footer class="bg-dark py-8 mt-auto border-t-4 border-accent">
-		<div class="container mx-auto px-4 text-center text-primary">
-		  <p class="font-bold">&copy; 2024 UpNotify. All rights reserved.</p>
-		  <p class="mt-2 font-medium">Empowering freelancers with advanced Upwork job notifications.</p>
-		</div>
-	  </footer>
+	  <Footer/>
+
+
+	  
 	</div>
 	<script type="application/ld+json" set:html={JSON.stringify({
 	  "@context": "http://schema.org",
@@ -144,29 +42,3 @@ const widthPercentage = (sales / 50) * 100;
 	})} />
   </Layout>
 
-<style>
-  /* Add this to your global styles or in a <style> tag in your Layout component */
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  .group:hover img {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .group:hover img:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-
-  .group:hover img:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-</style>

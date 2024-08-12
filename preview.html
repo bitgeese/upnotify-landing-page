@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpNotify - Never Miss an Opportunity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'upnotify-green': '#4ADE80',
+                        'upnotify-yellow': '#FAC515',
+                        'upnotify-gray': {
+                            100: '#F3F4F6',
+                            900: '#111827',
+                        },
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-sans bg-white">
+    <div class="bg-black h-1"></div>
+    <header x-data="{ isOpen: false }" class="bg-gray-100 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-upnotify-gray-900">
+                    Up<span class="text-upnotify-green">Notify</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#features" class="text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Features</a>
+                    <a href="#pricing" class="text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Pricing</a>
+                    <a href="#faq" class="text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">FAQ</a>
+                    <a href="#blog" class="text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Blog</a>
+                    <a href="#waitlist" class="bg-upnotify-green text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200 border border-black">Waitlist</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-upnotify-gray-900 hover:text-upnotify-green" aria-label="Toggle menu">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div x-show="isOpen" class="md:hidden mt-4">
+                <a href="#features" class="block py-2 text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Features</a>
+                <a href="#pricing" class="block py-2 text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Pricing</a>
+                <a href="#faq" class="block py-2 text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">FAQ</a>
+                <a href="#blog" class="block py-2 text-upnotify-gray-900 hover:text-upnotify-green transition-colors duration-200">Blog</a>
+                <a href="#waitlist" class="block py-2 mt-2 bg-upnotify-green text-white px-4 rounded-md hover:bg-green-600 transition-colors duration-200 text-center border border-black">Waitlist</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-upnotify-gray-900 mb-4">
+                            Never Miss an<br>
+                            <span class="text-upnotify-yellow">Opportunity</span>
+                        </h1>
+                        <h2 class="text-2xl md:text-3xl font-bold text-upnotify-gray-900 mb-6">
+                            Advanced RSS and<br>
+                            Powerful Search
+                        </h2>
+                        <p class="text-lg text-upnotify-gray-900 mb-8">
+                            UpNotify goes beyond simple RSS feeds. Our AI-powered platform ensures you never miss the perfect gig, with advanced filtering and intelligent job matching tailored for freelancers and agencies.
+                        </p>
+                        <a href="#waitlist" class="inline-block bg-upnotify-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-green-600 transition-colors duration-200">
+                            Sign up for waitlist
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/api/placeholder/600/400" alt="UpNotify Interface" class="w-full h-auto rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-upnotify-green py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Powerful Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Upwork RSS Compatibility</h3>
+                        <p>Seamlessly replace your Upwork RSS feeds with our identical format, ensuring your existing integrations and automations continue to work flawlessly.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Advanced Search Filtering</h3>
+                        <p>Create complex search queries with multiple conditions, including keyword combinations, budget ranges, and client history.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">AI-Powered Job Matching</h3>
+                        <p>Our intelligent system learns your preferences and bidding history to highlight jobs that best match your skills and interests.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Real-Time Notifications</h3>
+                        <p>Get instant alerts for new jobs matching your criteria, giving you a competitive edge in being the first to apply.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Integration Flexibility</h3>
+                        <p>Works with popular tools like Zapier, IFTTT, or any platform that supports RSS feeds, streamlining your job search workflow.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Customizable Alerts</h3>
+                        <p>Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-upnotify-gray-900 mb-12 text-center">How UpNotify Elevates Your Freelancing</h2>
+                <ol class="list-decimal list-inside space-y-4 max-w-2xl mx-auto">
+                    <li class="text-lg">Sign up for UpNotify and create your advanced search profile</li>
+                    <li class="text-lg">Customize your AI preferences to match your skills and interests</li>
+                    <li class="text-lg">Integrate with your favorite tools using our RSS feed or API</li>
+                    <li class="text-lg">Receive highly relevant job notifications in real-time</li>
+                    <li class="text-lg">Apply to jobs faster, increasing your chances of landing gigs</li>
+                    <li class="text-lg">Continuously refine your search with our adaptive AI system</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="bg-upnotify-gray-100 py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-upnotify-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-8 max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">How does UpNotify's AI-powered filtering work?</h3>
+                        <p>Our AI analyzes your profile, past bidding history, and job preferences to intelligently filter and rank job postings. It learns from your interactions, continuously improving its recommendations over time.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Can I still use UpNotify with my existing integrations?</h3>
+                        <p>Absolutely! UpNotify provides an RSS feed compatible with the deprecated Upwork format. Simply replace your old Upwork RSS URL with your new UpNotify URL, and your existing integrations will continue to work seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="waitlist" class="bg-upnotify-green py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Ready to Revolutionize Your Job Search?</h2>
+                <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+                    <p class="mb-4 text-center">Secure your spot now or sign up to stay updated on our launch.</p>
+                    <form x-data="{ email: '' }" @submit.prevent="console.log('Form submitted with email:', email)">
+                        <div class="flex">
+                            <input 
+                                type="email" 
+                                x-model="email"
+                                placeholder="Enter your email" 
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-upnotify-green"
+                                required
+                            >
+                            <button 
+                                type="submit"
+                                class="bg-upnotify-green text-white px-4 py-2 rounded-r-md hover:bg-green-600 transition-colors duration-200"
+                            >
+                                Signup
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-upnotify-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 UpNotify. All Rights Reserved</p>
+            <p class="mt-2">Empowering Freelancers</p>
+        </div>
+    </footer>
+</body>
+</html>
