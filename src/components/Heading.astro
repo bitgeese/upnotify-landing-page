@@ -1,10 +1,11 @@
 ---
 export interface Props {
   label: string;
+  color?: string;
 }
 
-const { label } = Astro.props;
 
+const { label, color = 'text-dark' } = Astro.props; 
 ---
-<h3 class="text-3xl font-semibold text-dark">{label}</h3>
+<h3 class={`text-3xl font-semibold ${color}`}>{label}</h3>
 
