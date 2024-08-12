@@ -1,0 +1,27 @@
+---
+import FAQCard from "../components/FAQCard.astro"
+import Heading from "../components/Heading.astro"
+
+---
+<div x-data="{ activeIndex: null }" class="bg-pearl">
+    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <div class="mx-auto max-w-4xl divide-y divide-dark/10">
+        <Heading label="Frequently Asked Questions"/>
+        <dl class="mt-10 space-y-6 divide-y divide-dark/10">
+          
+
+          {[
+            { question: "How does UpNotify's RSS feed compare to Upwork's deprecated feed?", answer: "Our RSS feed is designed to be fully compatible with Upwork's deprecated format. You can simply replace your old Upwork RSS URL with your new UpNotify URL, ensuring all your existing integrations continue to work without any modifications." },
+            { question: "What makes UpNotify's advanced search better than Upwork's built-in search?", answer: "UpNotify offers more granular control over search parameters, allowing you to create complex, multi-condition searches that aren't possible with Upwork's standard search. This includes combining multiple keywords, setting specific budget ranges, filtering by client history, and more." },
+            { question: "Can I use UpNotify without the AI features?", answer: "Absolutely! While we offer AI-enhanced filtering as an option, our core functionality - the RSS feed restoration and advanced search capabilities - works independently of any AI features. You have full control over which features you use." },
+            { question: "How many search profiles can I have?", answer: "We plan to offer multiple tiers supporting different numbers of search profiles. More details will be available closer to launch." },
+            { question: "Is my data safe with UpNotify?", answer: "We take data security seriously. UpNotify uses bank-level encryption to protect your data, and we never share your personal information with third parties." }
+          ].map((item, index) => (
+            <FAQCard question={item.question}>
+                {item.answer}
+            </FAQCard>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
