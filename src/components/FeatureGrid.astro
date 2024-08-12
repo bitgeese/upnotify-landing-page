@@ -1,0 +1,35 @@
+---
+import Heading from "../components/Heading.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+---
+
+
+<div class="bg-pearl py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div>
+          <h2 class="text-base font-semibold leading-7 text-lime">Everything you need</h2>
+          <Heading label="Powerful Features"></Heading>
+          <p class="mt-6 text-base leading-7 text-gray-600">We have everything you need to keep your Upwork RSS feed automations working, and even more.</p>
+        </div>
+        <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+            {[
+                { title: "Upwork RSS Restoration", description: "Revive your Upwork RSS feeds with our identical format. Seamlessly integrate with your existing tools and workflows." },
+                { title: "Advanced Search Capabilities", description: "Create complex, multi-condition searches beyond Upwork's standard options. Filter by keyword combinations, budget ranges, client history, and more." },
+                { title: "Real-Time Notifications", description: "Receive instant alerts for new jobs matching your criteria. Be among the first to apply and increase your chances of landing gigs." },
+                { title: "Integration Flexibility", description: "Works with Zapier, IFTTT, or any RSS-compatible platform. Automate your job search process effortlessly." },
+                { title: "Customizable Alert Profiles", description: "Set up multiple search profiles with different criteria and notification preferences to manage various job search strategies." },
+                { title: "AI-Enhanced Filtering", description: "Optional AI assistance to refine your searches based on your preferences and bidding history." }
+              ].map((feature, index) => (
+                <FeatureCard title={feature.title}>
+                    {feature.description}
+                </FeatureCard>
+
+              ))}
+          
+        </dl>
+      </div>
+    </div>
+  </div>
+  
+
