@@ -1,19 +1,19 @@
 ---
 import Layout from './Layout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
+
+
+
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <div class="min-h-screen flex flex-col bg-primary text-secondary font-sans">
-    <header class="bg-dark py-4 px-6 flex justify-between items-center border-b-4 border-accent">
-      <div class="flex items-center space-x-2">
-        <a href="/" class="font-bold text-3xl text-accent transform -rotate-2">UpNotify</a>
-      </div>
-      <nav class="space-x-6">
-        <a href="/blog" class="text-primary hover:text-accent transition-colors font-bold">Blog</a>
-      </nav>
-    </header>
+	<div class="">
+	  <NavBar/>
+
 
     <main class="flex-grow container mx-auto px-4 py-12 relative">
       <article class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
@@ -25,11 +25,25 @@ const { frontmatter } = Astro.props;
       </article>
     </main>
 
-    <footer class="bg-dark py-8 mt-auto border-t-4 border-accent">
-      <div class="container mx-auto px-4 text-center text-primary">
-        <p class="font-bold">&copy; 2024 UpNotify. All rights reserved.</p>
-        <p class="mt-2 font-medium">Empowering freelancers with advanced Upwork job notifications.</p>
-      </div>
-    </footer>
-  </div>
-</Layout>
+    <WaitlistForm/>
+	  
+	  <Footer/>
+
+
+	  
+	</div>
+	<script type="application/ld+json" set:html={JSON.stringify({
+	  "@context": "http://schema.org",
+	  "@type": "SoftwareApplication",
+	  "name": "UpNotify",
+	  "applicationCategory": "BusinessApplication",
+	  "operatingSystem": "Web",
+	  "description": "UpNotify helps freelancers find Upwork jobs faster with advanced RSS and search capabilities.",
+	  "offers": {
+		"@type": "Offer",
+		"price": "6.00",
+		"priceCurrency": "USD"
+	  }
+	})} />
+  </Layout>
+

@@ -31,7 +31,7 @@ import Container from '../layouts/Container.astro';
         <a href={Astro.url.pathname === '/' ? '#faq' : '/faq'}  class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">FAQ</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Button href={Astro.url.pathname === '/' ? '#waitlist' : '/waitlist'}>
+        <Button href="/#waitlist">
           Waitlist
         </Button>
       </div>
@@ -70,7 +70,7 @@ import Container from '../layouts/Container.astro';
             <a href={Astro.url.pathname === '/' ? '#faq' : '/faq'}  class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">FAQ</a>
           </div>
           <div class="py-6">
-            <Button href={Astro.url.pathname === '/' ? '#waitlist' : '/waitlist'} >
+            <Button href="/#waitlist" >
               Waitlist
             </Button>
           </div>
