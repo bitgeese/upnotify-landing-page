@@ -1,79 +1,245 @@
 ---
-import Button from "./Button.astro"
+import Button from "./Button.astro";
 ---
+
 <div class="py-16 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-4xl text-center">
-        <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Best Price for your needs</p>
-      </div>
-      <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Choose a plan that empowers your freelance journey with advanced job search tools, real-time alerts, and AI-driven recommendations to help you land the best gigs effortlessly.</p>
-     
-      <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <div class="rounded-2xl p-8 xl:p-10 border-4 border-dark shadow-lime bg-pearl">
-          <div class="flex items-center justify-between gap-x-4">
-            <h3 id="tier-freelancer" class="text-lg font-semibold leading-8 text-gray-900">Starter</h3>
-          </div>
-          <p class="mt-4 font-mono text-base leading-6 text-dark">The essentials to provide your best work for clients.</p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span class="text-4xl font-bold tracking-tight text-gray-900">$9</span>
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-          </p>
-          <Button variant="full-secondary">Buy Plan</Button>
-          <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10">
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-lime" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              3 Saved Searches
-            </li>
-          </ul>
+        <div class="mx-auto max-w-4xl text-center">
+            <p
+                class="mt-2 text-4xl font-bold tracking-tight text-black sm:text-5xl"
+            >
+                Best Price for your needs
+            </p>
         </div>
-        <div class="rounded-2xl p-8 xl:p-10 border-8 border-dark shadow-gold-lg">
-          <div class="flex items-center justify-between gap-x-4">
-            <h3 id="tier-startup" class="text-lg font-semibold leading-8 text-gold">Freelancer</h3>
-            <p class="rounded-full bg-gold/10 px-2.5 py-1 text-xs font-semibold leading-5 text-gold">Most popular</p>
-          </div>
-          <p class="mt-4 font-mono text-base leading-6 text-dark">A plan that scales with your rapidly growing business.</p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span class="text-4xl font-bold tracking-tight text-gray-900">$29</span>
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-          </p>
-          <Button variant="full-primary">Buy Plan</Button>
-          <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10">
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-lime" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              10 Saved Searches
-            </li>
-          </ul>
+        <p
+            class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-dark"
+        >
+            Choose a plan that empowers your freelance journey with advanced job
+            search tools, real-time alerts, and AI-driven recommendations to
+            help you land the best gigs effortlessly.
+        </p>
+
+        <div
+            class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        >
+            <div
+                class="rounded-2xl p-8 xl:p-10 border-4 border-dark shadow-lime bg-pearl"
+            >
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3
+                        id="tier-freelancer"
+                        class="text-lg font-semibold leading-8 text-black"
+                    >
+                        Starter
+                    </h3>
+                </div>
+                <p class="mt-4 font-mono text-base leading-6 text-dark">
+                    The essentials to provide your best work for clients.
+                </p>
+                <p class="mt-6 flex items-baseline gap-x-1">
+                    <!-- Price, update based on frequency toggle state -->
+                    <span
+                        class="text-4xl font-bold tracking-tight text-black"
+                        >$9</span
+                    >
+                    <!-- Payment frequency, update based on frequency toggle state -->
+                    <span class="text-sm font-semibold leading-6 text-dark"
+                        >/month</span
+                    >
+                </p>
+                <div class="mt-10">
+                    <Button variant="full-secondary">Buy Plan</Button>
+                </div>
+                <ul
+                    role="list"
+                    class="mt-8 space-y-3 text-sm leading-6 text-dark xl:mt-10"
+                >
+                    <li class="flex gap-x-3">
+                        <svg
+                            class="h-6 w-5 flex-none text-lime"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        3 Saved Searches
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="rounded-2xl p-8 xl:p-10 border-8 border-dark shadow-gold-lg"
+            >
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3
+                        id="tier-startup"
+                        class="text-lg font-semibold leading-8 text-gold"
+                    >
+                        Freelancer
+                    </h3>
+                    <p
+                        class="rounded-full bg-gold/10 px-2.5 py-1 text-xs font-semibold leading-5 text-gold"
+                    >
+                        Most popular
+                    </p>
+                </div>
+                <p class="mt-4 font-mono text-base leading-6 text-dark">
+                    A plan that scales with your rapidly growing business.
+                </p>
+                <p class="mt-6 flex items-baseline gap-x-1">
+                    <!-- Price, update based on frequency toggle state -->
+                    <span
+                        class="text-4xl font-bold tracking-tight text-black"
+                        >$29</span
+                    >
+                    <!-- Payment frequency, update based on frequency toggle state -->
+                    <span class="text-sm font-semibold leading-6 text-dark"
+                        >/month</span
+                    >
+                </p>
+                <div class="mt-10">
+                    <Button variant="full-primary">Buy Plan</Button>
+                </div>
+                <ul
+                    role="list"
+                    class="mt-8 space-y-3 text-sm leading-6 text-dark xl:mt-10"
+                >
+                    <li class="flex gap-x-3">
+                        <svg
+                            class="h-6 w-5 flex-none text-lime"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        10 Saved Searches
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="rounded-2xl p-8 xl:p-10 border-4 border-dark shadow-lime bg-pearl"
+            >
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3
+                        id="tier-enterprise"
+                        class="text-lg font-semibold leading-8 text-black"
+                    >
+                        Agency
+                    </h3>
+                </div>
+                <p class="mt-4 font-mono text-base leading-6 text-dark">
+                    Dedicated support and infrastructure for your company.
+                </p>
+                <p class="mt-6 flex items-baseline gap-x-1">
+                    <!-- Price, update based on frequency toggle state -->
+                    <span
+                        class="text-4xl font-bold tracking-tight text-black"
+                        >$99</span
+                    >
+                    <!-- Payment frequency, update based on frequency toggle state -->
+                    <span class="text-sm font-semibold leading-6 text-dark"
+                        >/month</span
+                    >
+                </p>
+                <div class="mt-10">
+                    <Button variant="full-secondary">Buy Plan</Button>
+                </div>
+                <ul
+                    role="list"
+                    class="mt-8 space-y-3 text-sm leading-6 text-dark xl:mt-10"
+                >
+                    <li class="flex gap-x-3">
+                        <svg
+                            class="h-6 w-5 flex-none text-lime"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        30 Saved Searches
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="rounded-2xl p-8 xl:p-10 border-4 border-dark shadow-lime bg-pearl">
-          <div class="flex items-center justify-between gap-x-4">
-            <h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-gray-900">Agency</h3>
-          </div>
-          <p class="mt-4 font-mono text-base leading-6 text-dark">Dedicated support and infrastructure for your company.</p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span class="text-4xl font-bold tracking-tight text-gray-900">$99</span>
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-          </p>
-          <Button variant="full-secondary">Buy Plan</Button>
-          <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10">
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-lime" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              30 Saved Searches
-            </li>
-          </ul>
+
+        <div
+            class="mx-auto mt-16 max-w-2xl rounded-2xl border-4 border-dark shadow-lime bg-pearl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none"
+        >
+            <div class="p-8 sm:p-10 lg:flex-auto">
+                <h3 class="text-2xl font-bold tracking-tight text-black">
+                    Lite
+                </h3>
+                <p class="mt-6 font-mono text-base leading-6 text-dark">
+                    Lorem ipsum dolor sit amet consect etur adipisicing elit.
+                    Itaque amet indis perferendis blanditiis repellendus etur
+                    quidem assumenda.
+                </p>
+                <div class="mt-10 flex items-center gap-x-4"></div>
+                <ul
+                    role="list"
+                    class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-dark sm:grid-cols-2 sm:gap-6"
+                >
+                    <li class="flex gap-x-3">
+                        <svg
+                            class="h-6 w-5 flex-none text-gold"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        1 RSS Feed
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0"
+            >
+                <div
+                    class="py-10 text-left lg:flex lg:flex-col lg:justify-center lg:py-16"
+                >
+                    <div class="mx-auto max-w-xs px-8">
+                        <p class="text-base font-semibold text-dark">
+                            Pay once, own it forever
+                        </p>
+                        <p class="mt-6 flex items-baseline gap-x-1">
+                            <!-- Price, update based on frequency toggle state -->
+                            <span
+                                class="text-4xl font-bold tracking-tight text-black"
+                                >$4</span
+                            >
+                            <!-- Payment frequency, update based on frequency toggle state -->
+                            <span
+                                class="text-sm font-semibold leading-6 text-dark"
+                                >/month</span
+                            >
+                        </p>
+                        <div class="mt-10">
+                            <Button variant="full-secondary">Buy Plan</Button>
+                        </div>
+                        <p
+                            class="mt-6 text-xs font-mono leading-5 text-dark"
+                        >
+                            Invoices and receipts available for easy company
+                            reimbursement
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  
+</div>
