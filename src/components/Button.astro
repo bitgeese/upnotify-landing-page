@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  variant?: 'primary' | 'secondary' | 'newsletter';
+  variant?: 'primary' | 'secondary' | 'newsletter' | 'full-primary' | 'full-secondary';
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   className?: string;
@@ -32,10 +32,20 @@ const variantStyles = {
     border-dark
     hover:bg-lime
   `,
+  'full-primary': `
+    w-full bg-gold text-dark 
+    border-dark
+    hover:bg-lime
+  `,
   secondary: `
     bg-transparent text-dark
     border-dark
     hover:bg-gold hover:text-pearl
+  `,
+  'full-secondary': `
+    w-full bg-pearl text-dark
+    border-dark
+    hover:bg-lime hover:text-dark
   `,
   newsletter: `
     bg-lime text-dark

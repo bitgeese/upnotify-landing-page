@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+import PricingSection from '../components/PricingSection.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
+
+const title = "UpNotify Pricing - Affordable Plans for Upwork Job Seekers";
+const description = "Explore UpNotify's competitive pricing plans designed to help freelancers access Upwork jobs efficiently. Get started with our powerful tools for real-time job alerts and advanced filtering.";
+
+---
+<Layout title={title} description={description}>
+	<div class="">
+	  <NavBar/>
+	  <main>
+        <PricingSection/>
+        <WaitlistForm/>
+	
+	  </main>
+	  <Footer/>
+
+
+	  
+	</div>
+	<script type="application/ld+json" set:html={JSON.stringify({
+	  "@context": "http://schema.org",
+	  "@type": "SoftwareApplication",
+	  "name": "UpNotify",
+	  "applicationCategory": "BusinessApplication",
+	  "operatingSystem": "Web",
+	  "description": "UpNotify helps freelancers find Upwork jobs faster with advanced RSS and search capabilities.",
+	  "offers": {
+		"@type": "Offer",
+		"price": "6.00",
+		"priceCurrency": "USD"
+	  }
+	})} />
+  </Layout>
+

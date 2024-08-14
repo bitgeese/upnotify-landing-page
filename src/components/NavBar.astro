@@ -9,7 +9,7 @@ import Container from '../layouts/Container.astro';
   <header x-data="{ isOpen: false }">
     <nav class="flex items-center justify-between py-6" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">UpNotify</span>
           <Logo/>
         </a>
@@ -26,13 +26,13 @@ import Container from '../layouts/Container.astro';
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#features" class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">Features</a>
-        <a href="#pricing" class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">Pricing</a>
+        <a href={Astro.url.pathname === '/' ? '#features' : '/features'}  class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">Features</a>
+        <a href="/pricing" class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">Pricing</a>
         <a href="/blog" class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">Blog</a>
-        <a href="#faq" class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">FAQ</a>
+        <a href={Astro.url.pathname === '/' ? '#faq' : '/faq'}  class="text-lg font-mono font-medium leading-6 text-dark hover:text-dark/80">FAQ</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Button>
+        <Button href={Astro.url.pathname === '/' ? '#waitlist' : '/waitlist'}>
           Waitlist
         </Button>
       </div>
@@ -65,13 +65,13 @@ import Container from '../layouts/Container.astro';
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="space-y-2 py-6">
-            <a href="/features" class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">Features</a>
+            <a href={Astro.url.pathname === '/' ? '#features' : '/features'}  class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">Features</a>
             <a href="/pricing" class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">Pricing</a>
             <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">Blog</a>
-            <a href="/faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">FAQ</a>
+            <a href={Astro.url.pathname === '/' ? '#faq' : '/faq'}  class="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-medium leading-7 text-dark hover:bg-dark/20">FAQ</a>
           </div>
           <div class="py-6">
-            <Button href="#contact">
+            <Button href={Astro.url.pathname === '/' ? '#waitlist' : '/waitlist'} >
               Waitlist
             </Button>
           </div>
