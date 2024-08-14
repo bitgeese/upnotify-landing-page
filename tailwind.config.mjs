@@ -3,6 +3,14 @@ module.exports = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
       extend: {
+        fontFamily: {
+          sans: ['Obviously', 'sans'],
+          mono: ["Degular Mono", "sans-mono"]
+
+        },
+        fontWeight: {
+          super: 950
+        },
         boxShadow: {
           'gold': '4px 4px 0px 0px rgba(255, 215, 0, 1)',
           'gold-lg': '8px 8px 0px 0px rgba(255, 215, 0, 1)',
@@ -16,10 +24,6 @@ module.exports = {
           dark: "#313B37",
           lime: "#00FF66",
           gold: "#FFD700"
-          // primary: '#F1F6FC',    // pearl white (now used as background)
-          // secondary: '#313B37',  // street gray (now used for text)
-          // accent: '#00FF66',     // lime (still used for accents)
-          // dark: '#011109',       // almost black (now used for contrast elements)
         },
       },
     },

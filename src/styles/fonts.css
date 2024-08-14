@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Thin.woff2') format('woff2'),
+        url('/fonts/Obviously-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Light.woff2') format('woff2'),
+        url('/fonts/Obviously-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Medium.woff2') format('woff2'),
+        url('/fonts/Obviously-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Regular.woff2') format('woff2'),
+        url('/fonts/Obviously-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Semibold.woff2') format('woff2'),
+        url('/fonts/Obviously-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Bold.woff2') format('woff2'),
+        url('/fonts/Obviously-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Black.woff2') format('woff2'),
+        url('/fonts/Obviously-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-Super.woff2') format('woff2'),
+        url('/fonts/Obviously-Super.woff') format('woff');
+    font-weight: 950;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-ThinItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-LightItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-RegularItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-SemiboldItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-BlackItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Obviously';
+    src: url('/fonts/Obviously-SuperItalic.woff2') format('woff2'),
+        url('/fonts/Obviously-SuperItalic.woff') format('woff');
+    font-weight: 950;
+    font-style: italic;
+    font-display: swap;
+}
+    
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Black.woff2') format('woff2'),
+        url('/fonts/DegularMono-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Bold.woff2') format('woff2'),
+        url('/fonts/DegularMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-BoldItalic.woff2') format('woff2'),
+        url('/fonts/DegularMono-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Thin.woff2') format('woff2'),
+        url('/fonts/DegularMono-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Light.woff2') format('woff2'),
+        url('/fonts/DegularMono-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Regular.woff2') format('woff2'),
+        url('/fonts/DegularMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-ThinItalic.woff2') format('woff2'),
+        url('/fonts/DegularMono-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-Medium.woff2') format('woff2'),
+        url('/fonts/DegularMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-RegularItalic.woff2') format('woff2'),
+        url('/fonts/DegularMono-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-SemiBold.woff2') format('woff2'),
+        url('/fonts/DegularMono-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular Mono';
+    src: url('/fonts/DegularMono-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonts/DegularMono-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
